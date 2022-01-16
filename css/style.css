@@ -1,0 +1,19 @@
+body {
+  font: 20pt Arial, sans-serif;
+}
+
+.navbar {
+  background-color: rgb(112, 192, 145);
+}
+
+.margin {
+  padding: 40px 40px;
+}
+
+.who-we-are {
+  background-color: rgb(220, 230, 226);
+  }
+
+.partnerships {
+  padding: 40px 40px;
+}
