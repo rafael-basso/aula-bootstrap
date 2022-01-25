@@ -1,0 +1,26 @@
+Um framework para sites responsivos e para front-end
+
+trabalha com <div class = "container>
+	<div class = "row">
+		<div class = "column">
+coluna = 12 partes
+
+ja contem um conjunto de estilos dos componentes (em classes)
+
+arquivos .min.css (mesmo conteudo css porem menor tamanho, pesa menos em meu site)
+
+getbootstrap.com/docs/components
+<link> / bootstrap.min.css
+
+pegar imgs do pexels.com
+
+Classes do bootstrap:
+container => tamanho da boz em questao
+container-fluid = container com width total
+text-center: text-align centralizado
+rounded-circle = cut off borders of images and round them
+colunas dentro de rows:
+div-container
+div-row
+div-col-lg-3
+//se usar 4 da pra usar 3 imagens ao lado, pois o total do width eh 12
