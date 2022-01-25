@@ -21,3 +21,16 @@ body {
 .carousel-inner img {
   height: 75vh;
 }
+
+.btn-end {
+  position: absolute; 
+  right: 40px;
+  background-color: rgb(220, 230, 226);
+  border: 2px solid white;
+  color: black;
+  /* transition: 0.5s ease-in; */
+}
+
+.btn-end:hover {
+  background-color: rgb(148, 151, 150);
+}
