@@ -34,3 +34,15 @@ body {
 .btn-end:hover {
   background-color: rgb(148, 151, 150);
 }
+
+.justify input{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  padding-right: 21.5vw;
+}
+
+.justify textarea {
+  margin-top: 15px; 
+}
