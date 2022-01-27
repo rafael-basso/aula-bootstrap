@@ -1,15 +1,21 @@
-// const btn = document.querySelector('.bntSendEmail')
 
-function sendMsg() {
-  // const button = event.currentTarget
-  
-  let msg = document.querySelector('#msg')
+  $(function() {
+    $('.toaster').on('click', function() {
+      let msg = document.querySelector('#msg');
+      toastr.options.positionClass = 'toast-bottom-right';
+      
+      if (msg.value == 0) {
+        //alert('Please, type or message')
+            toastr.clear();
+            toastr.error('Error', 'Please, type or message');    
+          } else {
+            //alert('MESSAGE SENT!')
+            toastr.clear();
+            toastr.success('Success', 'MESSAGE SENT!');
+          }
+      
+          msg.value = "";
+          
+    });
+  });
 
-  if(msg.value == 0) {
-    alert('Please, type or message')
-  } else {
-    alert('MESSAGE SENT!')
-  }
-  
-  msg.value = ""
-}
