@@ -15,13 +15,13 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-sm navbar-light">
     <a class="navbar-brand" href="https://www.dio.me/en" target="_blank">
       <img src="/img/logo-dio.svg" alt="imgTeste" height="80" />
     </a>
 
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav">
+    <div class="navbar-collapse">
+      <ul class="navbar-nav stack">
         <li class="nav-item">
           <a href="#who-we-are" class="nav-link">Who we are</a>
         </li>
@@ -37,37 +37,37 @@
         <button type="button" class="btn btn-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Send your message to us!
         </button>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                  Send your message to the HR department
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body justify">
-                <!-- <input id="inputEmail" type="text" placeholder="Type email here" style="font-size: 12pt;"> -->
-                <textarea id="msg" name="txt" cols="33" rows="8" placeholder="Type message here"></textarea>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                  Close
-                </button>
-                <div id="liveAlertPlaceholder"></div>
-                <button type="button" class="btn btn-primary toaster" id="liveAlertBtn">Send message</button>
+      </ul>
 
-                <!-- <button type="button" class="btn btn-primary" id="liveAlertBtn" onclick="sendMsg()">Send message</button> -->
-              </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Send your message to the HR department
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body justify">
+              <!-- <input id="inputEmail" type="text" placeholder="Type email here" style="font-size: 12pt;"> -->
+              <textarea id="msg" name="txt" cols="33" rows="8" placeholder="Type message here"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <div id="liveAlertPlaceholder"></div>
+              <button type="button" class="btn btn-primary toaster" id="liveAlertBtn">Send message</button>
+    
+              <!-- <button type="button" class="btn btn-primary" id="liveAlertBtn" onclick="sendMsg()">Send message</button> -->
             </div>
           </div>
         </div>
-        
-      </ul>
+      </div>
     </div>
   </nav>
-
+  
   <section id="who-we-are">
     <div class="container-fluid text-center who-we-are margin">
       <h1>Who we are</h1>

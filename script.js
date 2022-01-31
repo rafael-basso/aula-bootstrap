@@ -7,11 +7,11 @@
       if (msg.value == 0) {
         //alert('Please, type or message')
             toastr.clear();
-            toastr.error('Error', 'Please, type or message');    
+            toastr.error('Please, type your message');    
           } else {
             //alert('MESSAGE SENT!')
             toastr.clear();
-            toastr.success('Success', 'MESSAGE SENT!');
+            toastr.success('MESSAGE SENT!');
           }
       
           msg.value = "";
@@ -19,3 +19,6 @@
     });
   });
 
+
+
+  
