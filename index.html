@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="bootstrap-5.1.3-dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
   <!-- TOASTR -->
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
@@ -51,7 +51,7 @@
             </div>
             <div class="modal-body justify">
               <!-- <input id="inputEmail" type="text" placeholder="Type email here" style="font-size: 12pt;"> -->
-              <textarea id="msg" name="txt" cols="33" rows="8" placeholder="Type message here"></textarea>
+              <textarea id="msg" name="txt" cols="44.5" rows="8" placeholder="Type message here"></textarea>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -134,7 +134,20 @@
             <p style="font-size: 13pt">
               This is a description of services provided
             </p>
-            <img src="/img/services2.jpeg" alt="" />
+            <img src="/img/services2.jpeg" usemap="#my-map" />
+            <map name="my-map">
+              <area shape="poly" coords="167,214,411,177,423,254,196,300" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            </map>
+            <h3 style="margin-top: 10px; font-size: 15pt; font-style: italic; color: black; font-weight: bold;">Click on "YES" for further information</h3>
+            <!-- COLLAPSE -->
+
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+              </div>
+            </div>
+
+
           </div>
         </div>
       </div>
@@ -148,7 +161,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
     crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+    <script src="./src/js/script.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-
   $(function() {
     $('.toaster').on('click', function() {
       let msg = document.querySelector('#msg');
@@ -15,7 +14,6 @@
           }
       
           msg.value = "";
-          
     });
   });
 

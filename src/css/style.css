@@ -1,5 +1,5 @@
 body {
-  font: 20pt Arial, sans-serif;
+  font: 15pt Arial, sans-serif;
 }
 
 .navbar {
@@ -46,6 +46,8 @@ body {
 .justify textarea {
   margin-top: 15px; 
 }
+
+
 
 /* RESPONSIVE NAVBAR UL */
 @media (max-width: 700px) {
