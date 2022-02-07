@@ -1,0 +1,93 @@
+body {
+  font: 15pt Arial, sans-serif;
+}
+
+.navbar {
+  background-color: rgb(112, 192, 145);
+}
+
+.margin {
+  padding: 40px 40px;
+}
+
+.who-we-are {
+  background-color: rgb(220, 230, 226);
+  }
+
+.partnerships {
+  padding: 40px 40px;
+}
+
+.carousel-inner img {
+  height: 75vh;
+}
+
+.btn-end {
+  /* position: absolute;  */
+  position: fixed;
+  z-index: 9999;
+  right: 40px;
+  bottom: 30px;
+  
+  background-color: rgb(179, 179, 233);
+  border: 2px solid rgb(112, 192, 145);
+  color: black;
+  /* transition: 0.5s ease-in; */
+  text-align: center;
+  width: 7%;
+  height: 15%;
+}
+
+.btn-end:hover {
+  background-color: rgb(148, 151, 150);
+}
+
+.justify input{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  padding-right: 21.5vw;
+}
+
+.justify textarea {
+  margin-top: 15px; 
+}
+
+
+
+/* RESPONSIVE NAVBAR UL */
+@media (max-width: 700px) {
+  .btn-end {
+    width: 15vw;
+    /* height: 15vh; */
+    font-size: small;
+  }
+  
+  .stack {
+    font-size: medium;
+    display: grid;
+    margin-left: 30px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 580px) {
+  .btn{
+    width: 45%;
+    font-size: larger;
+  }
+}
+
+@media (max-width: 380px) {
+  .btn{
+    width: 75vw;
+    /* height: 10vh; */
+    margin-top: 20px;
+    font-size: medium;
+  }
+
+  .nav-item {
+    visibility: hidden;
+  }
+}

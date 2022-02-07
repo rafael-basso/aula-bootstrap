@@ -15,7 +15,7 @@ getbootstrap.com/docs/components
 pegar imgs do pexels.com
 
 Classes do bootstrap:
-container => tamanho da boz em questao
+container => tamanho da box em questao
 container-fluid = container com width total
 text-center: text-align centralizado
 rounded-circle = cut off borders of images and round them
@@ -24,3 +24,4 @@ div-container
 div-row
 div-col-lg-3
 //se usar 4 da pra usar 3 imagens ao lado, pois o total do width eh 12
+
