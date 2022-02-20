@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
 const nodemailer = require("nodemailer");
-// const path = require('path')
+const path = require('path')
 
 //MIDDLEWARE
-// app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static(__dirname))
 
 app.use(express.json())
@@ -51,11 +51,7 @@ app.listen(8080, () => {
 });
 
 
-// "rafael.basso@fatec.sp.gov.br", 
-//  "rafael.fatec123"
 
-// testem834@gmail.com
-// teste.mail@ame
 
 
 

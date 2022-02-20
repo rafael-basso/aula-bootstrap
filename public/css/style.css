@@ -47,13 +47,19 @@ body {
   align-items: center;
   justify-content: center; */
 
-  padding-right: 21.5vw;
+  width: 100%;
+  
 }
 
 .justify textarea {
   margin-top: 15px; 
+  width: 100%;
 }
 
+.navbar-collapse #new-Tag {
+  position: absolute;
+  right: 50px;
+}
 
 
 /* RESPONSIVE NAVBAR UL */

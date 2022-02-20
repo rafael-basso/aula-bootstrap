@@ -1,0 +1,6 @@
+.linhas {
+  margin-top: 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 100px;
+}
