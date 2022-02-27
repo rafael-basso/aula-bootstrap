@@ -7,20 +7,30 @@ $(function () {
         $("#btn-close-send-message").show("slow");
         $("#msg").val("");
         $("#inputEmail").val("");
-
-    });   
+    });
 
     $(".toaster").on("click", function () {
+      
+      const loader = document.querySelector("#loading");
+      function displayLoading() {
+        loader.classList.add("display");
+      }
+      function hideLoading() {
+        loader.classList.remove("display");
+      }
+        
+      
+        toastr.options.positionClass = "toast-bottom-right";
         let inputEmail = $("#inputEmail").val();
         let msg = $("#msg").val();
+        var validEmail = validateEmail(inputEmail);
 
-        toastr.options.positionClass = "toast-bottom-right";
-
-        var validEmail = validateEmail(inputEmail)    
-
-        if (msg == "" || inputEmail == "" || (validEmail == false)) {
+        if (msg == "" || inputEmail == "") {
             toastr.clear();
             toastr.error("Please type your email and message");
+        } else if (validEmail == false) {
+            toastr.clear();
+            toastr.error("Please type a valid email address");
         } else {
             let data = {
                 inputEmail: inputEmail,
@@ -31,7 +41,8 @@ $(function () {
 
             xhr.onreadystatechange = function () {
                 if (this.readyState !== 4 && this.status !== 200) {
-                    console.log(xhr.readyState);
+                    // console.log(xhr.readyState);
+                    displayLoading();
                 }
             };
 
@@ -42,6 +53,8 @@ $(function () {
                 // console.log(xhr.readyState);
 
                 if (xhr.responseText) {
+                    hideLoading();
+
                     toastr.clear();
                     toastr.success("Email sent successfully!");
                     $("#msg").val("");

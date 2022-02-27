@@ -35,7 +35,7 @@ transport.sendMail({
   //replyTo: "<mail>" // email de terceiro
   subject: `Message from ${req.body.inputEmail}`,
   text: req.body.msg,
-  // html: "<p>{{text}}</p>"
+  //html: '<p>text for test</p>'
 })
 .then(info => {
   res.send(info)
