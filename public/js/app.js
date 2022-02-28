@@ -12,11 +12,14 @@ $(function () {
     $(".toaster").on("click", function () {
       
       const loader = document.querySelector("#loading");
+      const loaderSpan = document.querySelector("#loadingSpan");
       function displayLoading() {
         loader.classList.add("display");
+        loaderSpan.classList.add("display");        
       }
       function hideLoading() {
         loader.classList.remove("display");
+        loaderSpan.classList.remove("display");
       }
         
       
