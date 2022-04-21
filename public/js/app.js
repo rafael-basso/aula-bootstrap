@@ -22,7 +22,7 @@ $(function () {
         loaderSpan.classList.remove("display");
       }
         
-      
+      //teste adicionar mudancas
         toastr.options.positionClass = "toast-bottom-right";
         let inputEmail = $("#inputEmail").val();
         let msg = $("#msg").val();
