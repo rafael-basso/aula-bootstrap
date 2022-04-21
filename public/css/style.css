@@ -27,31 +27,26 @@ body {
   height: 75vh;
 }
 
-#btn-close-send-message {
-  /* position: absolute;  */
+#btn-close-send-message {  
   position: fixed;
   z-index: 9999;
   right: 40px;
-  bottom: 30px;
-  
+  bottom: 30px;  
   background-color: rgb(179, 179, 233);
-  border: 2px solid rgb(112, 192, 145);
+  border: 2px solid rgb(112, 192, 145);  
   color: black;
-  /* transition: 0.5s ease-in; */
   text-align: center;
   width: 7%;
-  height: 15%;
-  /* font-size: 15px; */
+  height: 15%;  
+  font-size: 15px;
 }
 
 #btn-close-send-message:hover {
   background-color: rgb(148, 151, 150);
 }
 
-
 .justify input{
-  width: 100%;
-  
+  width: 100%;  
 }
 
 .justify textarea {
@@ -96,11 +91,18 @@ body {
 }
 
 
+/* RESPONSIVE */
+@media(max-width: 1200px) {
+  .container img {
+    width: 100%;
+  }
 
+  .map {
+    visibility: hidden;
+  }
+}
 
-/* RESPONSIVE NAVBAR UL */
-@media (max-width: 1000px) {
-   
+@media (max-width: 1000px) {   
   .stack {
     font-size: medium;
     display: grid;
@@ -110,24 +112,30 @@ body {
 
   #btn-close-send-message {
     font-size: 15px;
+    width: 8vw;
+  }      
+}
+
+
+@media (max-width: 830px) {
+  #btn-close-send-message {
+    font-size: 14px;   
     width: 10vw;
+  }  
+}
+
+@media (max-width: 620px) {
+  #btn-close-send-message {  
+    width: 12vw;
+  }
+
+  .container div > img {
+    width: inherit;
   }
 }
 
-@media (max-width: 700px) {
-  #btn-close-send-message {
-    font-size: 12px;
-    width: 15vw;
-  }
-}
-
-@media (max-width: 380px) {
-  #btn-close-send-message {
-    font-size: 10px;
-    width: 15vw;
-  }
-
-  .nav-item {
-    visibility: hidden;
-  }
+@media (max-width: 540px) {
+  #btn-close-send-message {    
+    width: 15vw;      
+  }  
 }
