@@ -1,6 +1,15 @@
 .linhas {
   margin-top: 50px;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  display: grid;  
   grid-gap: 100px;
+}
+
+#test-select,
+select option {
+  color: #000000;
+}
+
+#test-select:invalid,
+select option[value=""] {
+  color: #999999;
 }
