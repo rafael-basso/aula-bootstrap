@@ -42,7 +42,7 @@ $(function () {
 
             xhr.onreadystatechange = function () {
                 if (this.readyState !== 4 && this.status !== 200) {
-                    // console.log(xhr.readyState);
+                    //console.log(xhr.readyState);
                     displayLoading();
                 }
             };
@@ -50,8 +50,8 @@ $(function () {
             xhr.open("POST", "/");
             xhr.setRequestHeader("content-type", "application/json");
             xhr.onload = function () {
-                // console.log(xhr.responseText);
-                // console.log(xhr.readyState);
+                 console.log(xhr.responseText);
+                 //console.log(xhr.readyState);
 
                 if (xhr.responseText) {
                     hideLoading();

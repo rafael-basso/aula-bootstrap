@@ -92,17 +92,8 @@ body {
 
 
 /* RESPONSIVE */
-@media(max-width: 1200px) {
-  .container img {
-    width: 100%;
-  }
 
-  .map {
-    visibility: hidden;
-  }
-}
-
-@media (max-width: 1000px) {   
+@media screen and (max-width: 1024px) {   
   .stack {
     font-size: medium;
     display: grid;
@@ -112,30 +103,11 @@ body {
 
   #btn-close-send-message {
     font-size: 15px;
-    width: 8vw;
-  }      
-}
-
-
-@media (max-width: 830px) {
-  #btn-close-send-message {
-    font-size: 14px;   
-    width: 10vw;
-  }  
-}
-
-@media (max-width: 620px) {
-  #btn-close-send-message {  
-    width: 12vw;
-  }
-
+    width: 20vw;
+    height: 7vh;
+  } 
+  
   .container div > img {
     width: inherit;
   }
-}
-
-@media (max-width: 540px) {
-  #btn-close-send-message {    
-    width: 15vw;      
-  }  
 }
