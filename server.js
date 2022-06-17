@@ -14,15 +14,15 @@ app.get("/", (req, res) => {
 });
 
 app.post('/', (req, res) => {
-  console.log(req.body)
+  //console.log(req.body)
 
   var transport = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
-    // secure: false, 
+    secure: false, 
     auth: {
         user: "testem834@gmail.com",
-        pass: "teste.mail@ame",
+        pass: "teste@ame.123",        
     },
     tls: {
       rejectUnauthorized: false
