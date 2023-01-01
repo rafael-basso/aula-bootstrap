@@ -10,19 +10,19 @@ $(function () {
     });
 
     $(".toaster").on("click", function () {
-      
-      const loader = document.querySelector("#loading");
-      const loaderSpan = document.querySelector("#loadingSpan");
-      function displayLoading() {
-        loader.classList.add("display");
-        loaderSpan.classList.add("display");        
-      }
-      function hideLoading() {
-        loader.classList.remove("display");
-        loaderSpan.classList.remove("display");
-      }
-        
-      
+        const loader = document.querySelector("#loading");
+        const loaderSpan = document.querySelector("#loadingSpan");
+
+        function displayLoading() {
+            loader.classList.add("display");
+            loaderSpan.classList.add("display");
+        }
+
+        function hideLoading() {
+            loader.classList.remove("display");
+            loaderSpan.classList.remove("display");
+        }
+
         toastr.options.positionClass = "toast-bottom-right";
         let inputEmail = $("#inputEmail").val();
         let msg = $("#msg").val();
@@ -44,7 +44,6 @@ $(function () {
 
             xhr.onreadystatechange = function () {
                 if (this.readyState !== 4 && this.status !== 200) {
-                    // console.log(xhr.readyState);
                     displayLoading();
                 }
             };
@@ -52,12 +51,9 @@ $(function () {
             xhr.open("POST", "/");
             xhr.setRequestHeader("content-type", "application/json");
             xhr.onload = function () {
-                // console.log(xhr.responseText);
-                // console.log(xhr.readyState);
-
                 if (xhr.responseText) {
+                    console.log(xhr.responseText);
                     hideLoading();
-
                     toastr.clear();
                     toastr.success("Email sent successfully!");
                     $("#msg").val("");
@@ -67,7 +63,6 @@ $(function () {
                     toastr.error("Bad response! Please try again later.");
                 }
             };
-
             xhr.send(JSON.stringify(data));
         }
     });
