@@ -61,6 +61,7 @@ $(function () {
                 } else {
                     toastr.clear();
                     toastr.error("Bad response! Please try again later.");
+                    hideLoading();
                 }
             };
             xhr.send(JSON.stringify(data));
