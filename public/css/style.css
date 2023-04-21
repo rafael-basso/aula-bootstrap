@@ -27,6 +27,10 @@ body {
   height: 75vh;
 }
 
+#collapseExample1 {
+  margin: 0 5rem 0 5rem;
+}
+
 #btn-close-send-message {  
   position: fixed;
   z-index: 9999;
