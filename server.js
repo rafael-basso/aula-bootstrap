@@ -21,8 +21,7 @@ app.post("/", (req, res) => {
         port: 587,
         //secure: false,
         auth: {
-            user: "testem834@gmail.com",
-            //pass: "Testem.123",
+            user: "testem834@gmail.com",            
             pass: "cghjvlixemobojbt",            
         },
         tls: {
@@ -32,7 +31,7 @@ app.post("/", (req, res) => {
 
     transport
         .sendMail({
-            from: "testem834@gmail.com",
+            from: req.body.inputEmail,
             to: "testem834@gmail.com",
             //replyTo: "<mail>" // email de terceiro
             subject: `Message from ${req.body.inputEmail}`,
