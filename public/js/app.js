@@ -9,6 +9,18 @@ $(function () {
         $("#inputEmail").val("");
     });
 
+    $(".rounded-circle").on("click", function () {
+        if ($(".about").hasClass('d-none')) {
+            $(".about").removeClass('d-none');
+        } else {
+            $(".about").addClass('d-none');
+        }
+    });
+
+    // $(".rounded-circle").on("mouseleave", function () {
+    //     $(".about").addClass('d-none');
+    // });
+
     $(".toaster").on("click", function () {
         const loader = document.querySelector("#loading");
         const loaderSpan = document.querySelector("#loadingSpan");
