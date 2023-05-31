@@ -21,8 +21,8 @@ app.post("/", (req, res) => {
         port: 587,
         //secure: false,
         auth: {
-            user: "testem834@gmail.com",            
-            pass: "cghjvlixemobojbt",            
+            user: "",            
+            pass: "",            
         },
         tls: {
             rejectUnauthorized: false,
