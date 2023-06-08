@@ -32,7 +32,7 @@ app.post("/", (req, res) => {
     transport
         .sendMail({
             from: req.body.inputEmail,
-            to: "testem834@gmail.com",
+            to: "",
             //replyTo: "<mail>" // email de terceiro
             subject: `Message from ${req.body.inputEmail}`,
             text: req.body.msg,
