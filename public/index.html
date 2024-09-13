@@ -17,9 +17,12 @@
 
 <body>
   <nav class="navbar navbar-expand-sm navbar-light">
-    <a class="navbar-brand" href="https://www.dio.me/en" target="_blank">
-      <img src="/img/logo-dio.svg" alt="imgTeste" height="80" />
-    </a>
+    <div style="margin-left: 1rem;">
+      <p style="font-size: 12pt;"><i>Sponsored by:</i></p>
+      <a class="navbar-brand" href="https://www.dio.me/en" target="_blank">
+        <img src="/img/logo-dio.svg" alt="imgTeste" height="80" />
+      </a>
+    </div>
     <div class="navbar-collapse">
       <ul class="navbar-nav stack">
         <li class="nav-item">
@@ -47,7 +50,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                Send your message to the HR department
+                Send your message to <i>Rafael Basso</i>
               </h5>
               <button type="button" class="btn-close send-message-close" data-bs-dismiss="modal"
                 aria-label="Close"></button>
@@ -73,8 +76,18 @@
   </nav>
   <section id="who-we-are">
     <div class="container-fluid text-center who-we-are margin">
-      <h1>About me</h1>
-      <img src="/img/me.png" class="rounded-circle" height="250" width="250" />
+      <div class="about col-3 d-none">
+        Graduado em Análise e Desenvolvimento de Sistemas pela Fatec – Americana, concluído em 2021.
+        <br><br>Apesar de ter uma vasta experiência na área do ensino privado de idiomas, considero-me ainda um aprendiz em outra área de linguagem: a de programação.</div>
+      <div class="about-me col-4">
+        <h1>About me</h1>
+        <img src="/img/me.png" class="rounded-circle btn-circle" height="250" width="250" />
+      </div>
+      <div class="about col-3 d-none">
+        Tenho aprendido muito com o time que atuo atualmente na Online Applications, empresa na qual desde fevereiro de 2022 presto o serviço de desenvolvedor full-stack junior.
+        <br><br>
+        Sou focado, responsável e tenho facilidade para trabalhar em grupo.
+      </div>
     </div>
   </section>
   <section id="partnerships">
@@ -156,8 +169,10 @@
             <!-- COLLAPSE -->
             <div class="collapse" id="collapseExample">
               <div class="card card-body">
-                under construction                
-              </div>
+                <ul>
+                  <li>NLW3 (2019) | Maratona Discover (2021) - Rocketseat.</li>
+                  <li>Take Blip - Web Developer (DIO courses ) - 2022</li>
+                </ul>                
             </div>
           </div>
 
