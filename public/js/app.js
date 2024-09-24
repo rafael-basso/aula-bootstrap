@@ -9,7 +9,7 @@ $(function () {
         $("#inputEmail").val("");
     });
 
-    $(".btn-circle").on("click", function () {
+    $(".rounded-circle").on("click", function () {
         if ($(".about").hasClass('d-none')) {
             $(".about").removeClass('d-none');
         } else {
