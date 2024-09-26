@@ -3,5 +3,3 @@
 *Link for project: https://rafael-basso.github.io/aula-bootstrap/*
 
 <h4 align="center"> 🚧 Boostratp project + Nodemailer 👨‍💻 Em construção...  🚧</h4>
-
-<img src="https://img.shields.io/static/v1?label=Maintenance&message=UP&color=<COLOR>&style=<STYLE>&logo=<LOGO>" /> <img src="https://img.shields.io/static/v1?label=Commits&message=UP&color=<COLOR>&style=<STYLE>&logo=<LOGO>" /> 
