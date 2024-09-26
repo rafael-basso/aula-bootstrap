@@ -20,7 +20,7 @@
         <div class="row">
           <div class="col-lg-3">
             <details>
-              <summary>Display</summary>
+              <summary>Tag details: easy for showing/hide child elements</summary>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -70,20 +70,49 @@
     <div class="container-fluid text-center">
       <div class="container">
         <div class="row">
-          <div class="col-lg-2">
-            <input type="color">
-          </div>
-          <div class="col-lg-2">
-            <input type="range" value="2" min="1" max="4">
-          </div>
-          <div class="col-lg-2">
-            <input type="datetime-local">
-          </div>
-          <div class="col-lg-2">
-            <input type="time">
-          </div>
+          <p>Tag: datalist with option. It helps use easy drop-down selector with autocomplete search</p>
           <div class="col-lg-4">
-            <input type="week">
+            <input type="text" list="suggestion" size="50px" placeholder="Search cars...">
+            <datalist id="suggestion">
+              <option value="mercedez">Detail: nice car</option>
+              <option value="Volks">Detail: good car</option>
+            </datalist>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid text-center">
+      <div class="container">
+        <div class="row">
+          <p>Tag abbr: This helps use an easy tooltip</p>
+          <abbr title="Hypertext Markup Lnaguage">HTML</abbr>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid text-center">
+      <div class="container">
+        <div class="row">
+          <p>Tag pre: This helps keep the text format like spaces, line break, etc</p>
+          <pre>This has      spaces
+            this has line break
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid text-center">
+      <div class="container">
+        <div class="row">
+          <p>Tag dialog: This helps use easy modal opening/closing</p>
+          <button onclick="document.getElementById('dialog').show()">Open</button>
+          <div class="row">
+            <dialog id="dialog">
+              Box container
+              <button onclick="document.getElementById('dialog').close()">Close</button>
+            </dialog>
           </div>
         </div>
       </div>
@@ -92,19 +121,18 @@
     <div class="container-fluid text-center">
       <div class="container">
         <div class="row">
+          <p>This is progress/meter tags. It helps use progress bar</p>
           <div class="col-lg-4">
-            <input type="text" list="suggestion" size="50px" placeholder="Search cars...">
-            <datalist id="suggestion">
-              <option value="mercedez">Detail: nice car</option>
-              <option value="Volks">Detail: good car</option>
-            </datalist>
-          </div>
-          <div class="col-lg-4">
-            <meter value="50" max="100" min="10"></meter>
-          </div>
-          <div class="col-lg-4">
-            <progress value="5" max="20"></progress>
-          </div>
+            <meter value="10" max="100" min="0" low="20" high="60" optimum="90"></meter>
+          </div>    
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid text-center">
+      <div class="container">
+        <div class="row">          
+          <mark>This is mark tag, with yellow color as default, if no other lib overloading it</mark>>
         </div>
       </div>
     </div>
