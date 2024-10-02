@@ -22,7 +22,7 @@ app.post("/", (req, res) => {
         //secure: false,
         auth: {
             user: "testem834@gmail.com",            
-            pass: "Testem.123",            
+            pass: "pxnw fvmt vvda jmwi",            
         },
         tls: {
             rejectUnauthorized: false,
