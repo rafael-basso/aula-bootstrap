@@ -68,11 +68,6 @@ body {
   width: 100%;
 }
 
-.navbar-collapse #new-Tag {
-  position: absolute;
-  right: 50px;
-}
-
 /* LOADING IMAGE */
 #loading {
   width: 3rem;
@@ -121,19 +116,31 @@ body {
 
 @media screen and (max-width: 1024px) {   
   .stack {
-    font-size: medium;
     display: grid;
     margin-left: 30px;
     font-weight: bold;
   }
 
-  #btn-close-send-message {
+  .stack > li > a {
     font-size: 15px;
-    width: 20vw;
-    height: 7vh;
+  }
+
+  #btn-close-send-message {
+    font-size: 12px;
+    width: auto;
   } 
   
   .container div > img {
     width: inherit;
+  }
+
+  #who-we-are,
+  #who-we-are .about-me h3 {
+    font-size: 15px;
+  }
+
+  #who-we-are .about-me img {
+    max-width: 100%;
+    height: auto;
   }
 }
