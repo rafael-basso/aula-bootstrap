@@ -2,4 +2,4 @@
 
 *Link for project: https://rafael-basso.github.io/aula-bootstrap/*
 
-<h4 align="center"> 🚧 Boostratp project + Nodemailer 👨‍💻 Em construção...  🚧</h4>
+<h4 align="center"> 🚧 Boostratp project + Nodemailer
