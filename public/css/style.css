@@ -5,6 +5,13 @@ body {
 .navbar {
   background-color: rgb(112, 192, 145);
 }
+.navbar-collapse {
+  justify-content: space-between;
+}
+
+.navbar-collapse .language {
+  margin-right: 15px;
+}
 
 .margin {
   padding: 40px 40px;

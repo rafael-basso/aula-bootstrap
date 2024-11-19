@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WebPage</title>
+  <title>Home</title>
   <link rel="icon" href="/public/img/thumbs-up-solid.svg">
   <!-- <link rel="stylesheet" type="text/css" href="/bootstrap-5.1.3-dist/css/bootstrap.min.css" /> -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
@@ -19,7 +19,8 @@
 <body>
   <nav class="navbar navbar-expand-sm navbar-light">
     <div style="margin-left: 1rem;">
-      <p style="font-size: 12pt;"><i>Sponsored by:</i></p>
+      <p class="en-us d-none" style="font-size: 12pt;"><i>Sponsored by:</i></p>
+      <p class="pt-br" style="font-size: 12pt;"><i>Patrocinado por:</i></p>
       <a class="navbar-brand" href="https://www.dio.me/en" target="_blank">
         <img src="/public/img/logo-dio.svg" alt="imgTeste" height="50" />
       </a>
@@ -27,48 +28,71 @@
     <div class="navbar-collapse">
       <ul class="navbar-nav stack">
         <li class="nav-item">
-          <a href="#who-we-are" class="nav-link" onmouseover="upperCase(this)" onmouseout="lowerCase(this)">Who am I</a>
+          <a href="#who-we-are" class="nav-link en-us d-none" onmouseover="upperCase(this)" onmouseout="lowerCase(this)">Who am I</a>
+          <a href="#who-we-are" class="nav-link pt-br" onmouseover="upperCase(this)" onmouseout="lowerCase(this)">Quem sou eu</a>
         </li>
         <li class="nav-item">
-          <a href="#partnerships" class="nav-link" onmouseover="upperCase(this)"
-            onmouseout="lowerCase(this)">Interests</a>
+          <a href="#partnerships" class="nav-link en-us d-none" onmouseover="upperCase(this)" onmouseout="lowerCase(this)">Interests</a>
+          <a href="#partnerships" class="nav-link pt-br" onmouseover="upperCase(this)" onmouseout="lowerCase(this)">Interesse</a>
         </li>
         <li class="nav-item">
-          <a href="#services" class="nav-link" onmouseover="upperCase(this)" onmouseout="lowerCase(this)">Education</a>
+          <a href="#services" class="nav-link en-us d-none" onmouseover="upperCase(this)" onmouseout="lowerCase(this)">Education</a>
+          <a href="#services" class="nav-link pt-br" onmouseover="upperCase(this)" onmouseout="lowerCase(this)">Escolaridade</a>
         </li>
         <li class="nav-item">
-          <a href="html/newTags.html" target="_blank" class="nav-link" id="new-Tag">Go to "HTML tags"</a>
+          <a href="html/newTags.html" target="_blank" class="nav-link en-us d-none" id="new-Tag" onmouseover="upperCase(this)" onmouseout="lowerCase(this)">Go to "HTML tags"</a>
+          <a href="html/newTags.html" target="_blank" class="nav-link pt-br" id="new-Tag" onmouseover="upperCase(this)" onmouseout="lowerCase(this)">Ir para "HTML tags"</a>
         </li>
       </ul>
+      <div class="language">
+        <select class="form-select" aria-label="Default select example">
+          <option value="1">Português</option>
+          <option value="2">English</option>
+        </select>
+      </div>
       <!-- Button trigger modal -->
-      <button type="button" id="btn-close-send-message" class="btn btn-end rounded-circle btn-info btn-md"
+      <button type="button" id="btn-close-send-message" class="en-us d-none btn btn-end rounded-circle btn-info btn-md"
         data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-backdrop="static" data-bs-keyboard="false">
         Contact me!
+      </button>
+      <button type="button" id="btn-close-send-message" class="pt-br btn btn-end rounded-circle btn-info btn-md"
+        data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-backdrop="static" data-bs-keyboard="false">
+        Contate-me!
       </button>
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
+              <h5 class="en-us d-none modal-title" id="exampleModalLabel">
                 Send your message to <i>Rafael Basso</i>
+              </h5>
+              <h5 class="pt-br modal-title" id="exampleModalLabel">
+                Envie mensagem para <i>Rafael Basso</i>
               </h5>
               <button type="button" class="btn-close send-message-close" data-bs-dismiss="modal"
                 aria-label="Close"></button>
             </div>
             <div class="modal-body justify">
-              <input id="inputEmail" type="text" placeholder="Type email here" style="font-size: 12pt;">
-              <textarea id="msg" name="txt" cols="44.5" rows="8" placeholder="Type message here"></textarea>
+              <input class="en-us d-none" id="inputEmail" type="text" placeholder="Type email here" style="font-size: 12pt;">
+              <input class="pt-br" id="inputEmail" type="text" placeholder="Digite o email aqui" style="font-size: 12pt;">
+              <textarea class="en-us d-none" id="msg" name="txt" cols="44.5" rows="8" placeholder="Type message here"></textarea>
+              <textarea class="pt-br" id="msg" name="txt" cols="44.5" rows="8" placeholder="Escreva sua mensagem aqui"></textarea>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary send-message-close" data-bs-dismiss="modal">
+              <button type="button" class="en-us d-none btn btn-secondary send-message-close" data-bs-dismiss="modal">
                 Close
               </button>
-              <button type="button" class="btn btn-primary toaster" id="liveAlertBtn">Send message</button>            
+              <button type="button" class="pt-br btn btn-secondary send-message-close" data-bs-dismiss="modal">
+                Fechar
+              </button>
+              <button type="button" class="en-us d-none btn btn-primary toaster" id="liveAlertBtn">Send message</button>            
+              <button type="button" class="pt-br btn btn-primary toaster" id="liveAlertBtn">Enviar mensagem</button>            
               <!-- loading image -->
               <div id="loading"></div>
               <!--Showing output-->
-              <span id="loadingSpan">Sending...</span>
+              <span class="en-us d-none" id="loadingSpan">Sending...</span>
+              <span class="pt-br" id="loadingSpan">Enviando...</span>
             </div>
           </div>
         </div>
@@ -78,41 +102,60 @@
   <section id="who-we-are">
     <div class="container-fluid text-center who-we-are margin">
       <div class="about col-3 d-none">
-        Graduated in Systems Analysis and Development from Fatec - Americana, in 2021.
-        <br><br>Although I have extensive experience in private language teaching, I still consider myself an apprentice in another language area: programming.</div>
+        <p class="en-us d-none">
+          Graduated in Systems Analysis and Development from Fatec - Americana, in 2021.
+          <br><br>Although I have extensive experience in private language teaching, I still consider myself an apprentice in another language area: programming.
+        </p>
+        <p class="pt-br">
+          Graduado em Análise e Desenvolviemnto de Sistemas pela Fatec - Americana, em 2021.
+          <br><br>Embora tenha uma vasta experiência no ensino privado de línguas, considero-me ainda um aprendiz em outra linguagem: a programação.
+        </p>
+      </div>
       <div class="about-me col-4">
-        <h3>Click on the picture for further information about me</h1>
+        <h3 class="en-us d-none">Click on the picture for further information about me</h1>
+        <h3 class="pt-br">Clique na foto para mais informações</h1>
         <img src="/public/img/me.png" class="rounded-circle btn-circle" height="250" width="250" />
       </div>
       <div class="about col-3 d-none">
-        I've learned a lot from the team I have recentely worked with at Online Applications, where I've been a junior full-stack developer since February 2022.
+        <p class="en-us d-none">
+          I've learned a lot from the team I have recentely worked with at Online Applications, where I've been a junior full-stack developer since February 2022.
         <br><br>
-        I'm focused, responsible and easy to work with.
+          I'm focused, responsible and easy to work with.
+        </p>
+        <p class="pt-br">
+          Aprendi muito com a equipa com quem trabalhei recentemente na Online Applications, onde fui programador júnior fullstack por quase 3 anos.
+        <br><br>
+          Sou focado, responsável e fácil de trabalhar em grupo.
+        </p>
       </div>
     </div>
   </section>
   <section id="partnerships">
     <div class="container-fluid text-center partnerships margin">
-      <h3 class="margin">INTERESTS</h3>
+      <h3 class="en-us d-none margin">INTERESTS</h3>
+      <h3 class="pt-br margin">INTERESSE</h3>
       <!-- carousel -->
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="/public/img/teamwork.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-md-block">
-              <p>Teamwork</p>
+              <p class="en-us d-none">Teamwork</p>
+              <p class="pt-br">Trabalho em equipe</p>
             </div>
           </div>
           <div class="carousel-item">
             <img src="/public/img/code.jpg" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-md-block">
-              <p>Web Development</p>
+              <p class="en-us d-none">Web Development</p>
+              <p class="pt-br">Desenvolvimento Web</p>
             </div>
           </div>
           <div class="carousel-item">
             <img src="/public/img/workstation.jpg" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-md-block">
-              <p>Remote job</p>
+              <p class="en-us d-none">Remote job</p>
+              <p class="pt-br">Trabalho remoto</p>
             </div>
           </div>
         </div>
@@ -131,21 +174,21 @@
   </section>
   <section id="services">
     <div class="container-fluid text-center margin services">
-      <h3 class="margin">EDUCATION</h3>
+      <h3 class="en-us d-none margin">EDUCATION</h3>
+      <h3 class="pt-br margin">EDUCAÇÃO</h3>
       <div class="container">
         <div class="row col-sm">
 
           <div class="col-lg-6">
-            <p style="font-size: 13pt">
-              Technician degree attended at:
-            </p>
+            <p class="en-us d-none" style="font-size: 13pt">Technician degree attended at:</p>
+            <p class="pt-br" style="font-size: 13pt">Tecnólogo graduado por:</p>
             <img src="/public/img/services.jpeg" usemap="#my-map1" />
             <map name="my-map1">
               <area shape="poly" coords="151,154,256,210,232,247,140,192" data-bs-toggle="collapse"
                 href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
             </map>
-            <h3 style="margin-top: 10px; font-size: 15pt; font-style: italic; color: black; font-weight: bold;">Click on
-              the phone to see the school's logo</h3>
+            <h3 class="en-us d-none" style="margin-top: 10px; font-size: 15pt; font-style: italic; color: black; font-weight: bold;">Click on the phone to see the school's logo</h3>
+            <h3 class="pt-br" style="margin-top: 10px; font-size: 15pt; font-style: italic; color: black; font-weight: bold;">Clique no smartphone para visualizar o logo da Faculdade</h3>
             <!-- COLLAPSE -->
             <div class="collapse" id="collapseExample1">
               <div class="card card-body">
@@ -154,16 +197,15 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <p style="font-size: 13pt">
-              This is a description of extra courses taken:
-            </p>
+            <p class="en-us d-none" style="font-size: 13pt">This is a description of extra courses taken:</p>
+            <p class="pt-br" style="font-size: 13pt">Breve descrição de alguns cursos realizados:</p>
             <img src="/public/img/services2.jpeg" usemap="#my-map" />
             <map name="my-map">
               <area shape="poly" coords="167,214,411,177,423,254,196,300" data-bs-toggle="collapse"
                 href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             </map>
-            <h3 style="margin-top: 10px; font-size: 15pt; font-style: italic; color: black; font-weight: bold;">Click on
-              "YES" for further information</h3>
+            <h3 class="en-us d-none" style="margin-top: 10px; font-size: 15pt; font-style: italic; color: black; font-weight: bold;">Click on "YES" for further information</h3>
+            <h3 class="pt-br" style="margin-top: 10px; font-size: 15pt; font-style: italic; color: black; font-weight: bold;">Clique no "YES para mais informações</h3>
             <!-- COLLAPSE -->
             <div class="collapse" id="collapseExample">
               <div class="card card-body">
@@ -182,7 +224,8 @@
   </section>
 
   <footer class="container-fluid margin">
-    <p style="font-style: italic">Developed by Rafael Basso&#174 - 2022</p>
+    <p class="en-us d-none"style="font-style: italic">Developed by Rafael Basso&#174 - 2022</p>
+    <p class="pt-br" style="font-style: italic">Desenvolvido por Rafael Basso&#174 - 2022</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"

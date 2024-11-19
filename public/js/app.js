@@ -17,13 +17,23 @@
         }
     });
 
-    // $(".rounded-circle").on("mouseleave", function () {
-    //     $(".about").addClass('d-none');
-    // });
+    $(".language .form-select").on('change', (event) => {
+        const value = event.target.value;
+
+        if (value == 2 || value == "2") {
+            $('.en-us').removeClass('d-none');
+            $('.pt-br').addClass('d-none');
+        } else {
+            $('.en-us').addClass('d-none');
+            $('.pt-br').removeClass('d-none');
+        }
+    });
 
     $(".toaster").on("click", function () {
         const loader = document.querySelector("#loading");
         const loaderSpan = document.querySelector("#loadingSpan");
+        const select = document.querySelector(".form-select");
+        const selectedLanguage = select.options[select.selectedIndex].value;
 
         function displayLoading() {
             loader.classList.add("display");
@@ -42,10 +52,10 @@
 
         if (msg == "" || inputEmail == "") {
             toastr.clear();
-            toastr.error("Please type your email and message");
+            toastr.error(`${selectedLanguage == 2 || selectedLanguage == "2" ? "Please type your email and message" : "Por favor digite seu email e mensagem"}`)
         } else if (validEmail == false) {
             toastr.clear();
-            toastr.error("Please type a valid email address");
+            toastr.error(`${selectedLanguage == 2 || selectedLanguage == "2" ? "Please type a valid email address" : "Por favor digite um email válido"}`)
         } else {
             let data = {
                 inputEmail: inputEmail,
@@ -67,7 +77,7 @@
                     console.log(xhr.responseText);
                     hideLoading();
                     toastr.clear();
-                    toastr.success("Email sent successfully!");
+                    toastr.success(`${selectedLanguage == 2 || selectedLanguage == "2" ? "Email sent successfully!" : "Email enviado com sucesso!"}`);
                     $("#msg").val("");
                     $("#inputEmail").val("");
                 } else {
