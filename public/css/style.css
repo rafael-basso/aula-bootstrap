@@ -118,6 +118,10 @@ body {
   }
 }
 
+.text-mobile {
+  display: block;
+}
+
 
 /* RESPONSIVE */
 
@@ -149,5 +153,18 @@ body {
   #who-we-are .about-me img {
     max-width: 100%;
     height: auto;
+  }
+
+  #collapseExample1, #collapseExample {
+    display: block;
+    margin: 15px 0;
+  }
+
+  #collapseExample1 .card-body {
+    width: 100%;
+  }
+
+  .text-mobile {
+    display: none;
   }
 }
