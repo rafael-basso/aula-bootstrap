@@ -122,6 +122,11 @@ body {
   display: block;
 }
 
+.language select {
+  background-color: #e3e3e3;
+  cursor: pointer;
+}
+ 
 
 /* RESPONSIVE */
 
@@ -166,5 +171,12 @@ body {
 
   .text-mobile {
     display: none;
+  }
+
+  .language select {
+    width: auto;
+    margin-left: 30px;
+    background-color: #e3e3e3;
+    cursor: pointer;
   }
 }
