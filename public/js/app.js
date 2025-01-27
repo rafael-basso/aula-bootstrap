@@ -1,4 +1,4 @@
-$(function () {
+// $(function () {
     $("#btn-close-send-message").on("click", function () {
         $("#btn-close-send-message").hide("slow");
     });
@@ -100,7 +100,7 @@ $(function () {
             xhr.send(JSON.stringify(data));
         }
     });
-});
+// });
 
 function upperCase(element) {
     element.style.fontSize = "25px";
