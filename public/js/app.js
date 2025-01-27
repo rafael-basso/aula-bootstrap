@@ -1,12 +1,12 @@
-// $(function () {
+$(function () {
     $("#btn-close-send-message").on("click", function () {
         $("#btn-close-send-message").hide("slow");
     });
 
     $(".send-message-close").on("click", function () {
         $("#btn-close-send-message").show("slow");
-        $("#msg").val("");
-        $("#inputEmail").val("");
+        $("#exampleModal .msg").val();
+        $("#exampleModal .inputEmail").val();
     });
 
     $(".rounded-circle").on("click", function () {
@@ -46,8 +46,19 @@
         }
 
         toastr.options.positionClass = "toast-bottom-right";
-        let inputEmail = $("#inputEmail").val();
-        let msg = $("#msg").val();
+
+        const value = $(".language .form-select").val();
+        let inputEmail = "";
+        let msg = "";
+
+        if (value == 1 || value == '1') {
+            inputEmail = $("#brInputEmail").val();
+            msg = $("#brMsg").val();
+        } else {
+            inputEmail = $("#usInputEmail").val();
+            msg = $("#usMsg").val();
+        }
+
         var validEmail = validateEmail(inputEmail);
 
         if (msg == "" || inputEmail == "") {
@@ -78,8 +89,8 @@
                     hideLoading();
                     toastr.clear();
                     toastr.success(`${selectedLanguage == 2 || selectedLanguage == "2" ? "Email sent successfully!" : "Email enviado com sucesso!"}`);
-                    $("#msg").val("");
-                    $("#inputEmail").val("");
+                    $("#exampleModal .modal-body input").val("");
+                    $("#exampleModal .modal-body textarea").val("");
                 } else {
                     toastr.clear();
                     toastr.error("Bad response! Please try again later.");
@@ -89,7 +100,7 @@
             xhr.send(JSON.stringify(data));
         }
     });
-// });
+});
 
 function upperCase(element) {
     element.style.fontSize = "25px";
