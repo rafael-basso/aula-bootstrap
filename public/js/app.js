@@ -34,6 +34,8 @@
         const loaderSpan = document.querySelector("#loadingSpan");
         const select = document.querySelector(".form-select");
         const selectedLanguage = select.options[select.selectedIndex].value;
+        let inputEmail = "";
+        let msg = "";
 
         function displayLoading() {
             loader.classList.add("display");
@@ -47,11 +49,7 @@
 
         toastr.options.positionClass = "toast-bottom-right";
 
-        const value = $(".language .form-select").val();
-        let inputEmail = "";
-        let msg = "";
-
-        if (value == 1 || value == '1') {
+        if (selectedLanguage == 1 || selectedLanguage == '1') {
             inputEmail = $("#brInputEmail").val();
             msg = $("#brMsg").val();
         } else {
