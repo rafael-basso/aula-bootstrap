@@ -5,8 +5,8 @@
 
     $(".send-message-close").on("click", function () {
         $("#btn-close-send-message").show("slow");
-        $("#exampleModal .msg").val();
-        $("#exampleModal .inputEmail").val();
+        $("#exampleModal .modal-body input").val("");
+        $("#exampleModal .modal-body textarea").val("");
     });
 
     $(".rounded-circle").on("click", function () {
